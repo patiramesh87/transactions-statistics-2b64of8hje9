@@ -35,7 +35,7 @@ public class GlobalExceptionHandler {
 	@ExceptionHandler(DateRangeException.class)
 	  public final ResponseEntity<?> handleDateRangeException(DateRangeException ex) {
 		logger.error(ex.getMessage());
-		if(ex.getCode()==ErrorCode.OLDER_DATE.getCode()) {
+		if(ex.getCode() == ErrorCode.OLDER_DATE.getCode()) {
 			return new ResponseEntity<>(ex.getMessage(), HttpStatus.NO_CONTENT);
 		}
 		return new ResponseEntity<>(ex.getMessage(), HttpStatus.UNPROCESSABLE_ENTITY);

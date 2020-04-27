@@ -20,4 +20,5 @@ public class InfraException extends RuntimeException {
 		super(message, cause, enableSuppression, writableStackTrace);
 	}
 
+
 }
